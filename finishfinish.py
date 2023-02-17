@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import speech_recognition as sr
 import re
+import random
 
 ser = serial.Serial('COM3', 9600)
 time.sleep(2)
@@ -41,6 +42,23 @@ def lightTurn(var):
         print ("Light turned OFF")
         time.sleep(1)
 
+def powerFinder():
+    powerUsage = []
+    timeRange = int(input("How many hours would you like to see the usage for? "))
+    times = []
+
+    rand_list=[]
+    for i in range(timeRange):
+        times.append(i+1)
+        powerUsage.append(random.randint(1,5))
+
+    plt.ylabel('POWER USAGE IN KWH/H')
+    plt.xlabel('HOURS')
+
+    plt.plot(powerUsage)
+    plt.show()
+
+
 r=sr.Recognizer()
 mic=sr.Microphone()
 speech= sr.AudioFile('harvard.wav')
@@ -55,9 +73,10 @@ def interpret(r,mic):
     #==change to google for demonstration==
 
 #output=interpret(r,mic)
-output="what is the temperature"
+#output="what is the temperature"
 #output="turn lights off"
 #output="turn lights on"
+output="show the power"
 print(output)
 
 tempresult=re.search("what is the temperature",output)
@@ -79,8 +98,11 @@ else:
     var = '0'
     lightTurn(var)
 
-
-
+powerresult1=re.search("show the power",output)
+if powerresult1 == None:
+    pass
+else:   
+    powerFinder()
 
 
 
