@@ -5,4 +5,3 @@ This project is a proof of concept for a smart home managing system which would 
 
 It uses Automatic adjustments, graphing and speech recognition to give the user control but also allowing the home to manage itself.
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Epic_Systems.svg/800px-Epic_Systems.svg.png
