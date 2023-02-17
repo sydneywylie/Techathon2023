@@ -43,14 +43,10 @@ output="what is the temperature"
 print(output)
 
 tempresult=re.search("what is the temperature",output)
-if tempresult.group() == "what is the temperature":
-    #====
+if tempresult == None:
+    pass
+else:   
     tempratureFinder()
-
-    #==replace with actual temperature==
-    
-    #    temperature =sensor.temperature
-    #    print (temperature)
 
 
 
