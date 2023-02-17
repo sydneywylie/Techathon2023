@@ -72,11 +72,11 @@ def interpret(r,mic):
     #return r.recognize_google(audio)
     #==change to google for demonstration==
 
-#output=interpret(r,mic)
+output=interpret(r,mic)
 #output="what is the temperature"
 #output="turn lights off"
 #output="turn lights on"
-output="show the power"
+#output="show the power"
 print(output)
 
 tempresult=re.search("what is the temperature",output)
