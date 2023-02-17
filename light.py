@@ -16,3 +16,4 @@ def lightTurn(var):
             ser.write(b'0') #send 0
             print ("Light turned OFF")
             time.sleep(1)
+
