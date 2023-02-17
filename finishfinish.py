@@ -68,8 +68,8 @@ def interpret(r,mic):
         print("ready")
         audio = r.listen(source)
     #====
-    return r.recognize_sphinx(audio)
-    #return r.recognize_google(audio)
+    #return r.recognize_sphinx(audio)
+    return r.recognize_google(audio)
     #==change to google for demonstration==
 
 output=interpret(r,mic)
