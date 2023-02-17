@@ -33,3 +33,8 @@ elif output=="turn the light off" or output=="turn the lights off":
     #====
     print ("idk how yet sry")
     #==replace with actually turning off lights==
+
+elif output=="turn the light on" or output=="turn the lights on":
+    #====
+    print ("idk how yet sry")
+    #==replace with actually turning on lights==
