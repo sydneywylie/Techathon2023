@@ -24,6 +24,12 @@ def tempratureFinder():
             timeList.append(i+1)
             print(temperature)
     
+    xpoints = timeList
+    ypoints = temperatureList
+
+    plt.plot(xpoints, ypoints)
+    plt.show()
+    
 def lightTurn(var):      
     if (var == '1'): #if the value is 1
         ser.write(b'1') #send 1
@@ -49,8 +55,8 @@ def interpret(r,mic):
     #==change to google for demonstration==
 
 #output=interpret(r,mic)
-#output="what is the temperature"
-output="turn lights off"
+output="what is the temperature"
+#output="turn lights off"
 #output="turn lights on"
 print(output)
 
